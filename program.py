@@ -1,4 +1,4 @@
-#tells the user what kind of accessories, clothing, or action they need to wear or do today based on the weather (i did not have time to do every posisble combination, sorry)
+# tells the user what kind of accessories, clothing, or action they need to wear or do today based on the weather (i did not have time to do every posisble combination, sorry)
 
 usersun = str(input("Is it sunny today?: "))
 userrain = str(input("Is it raining today?: "))
