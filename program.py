@@ -29,7 +29,3 @@ while True:
         print("Don't drive, there might be ice on the roads.")
     if usersnow == "Yes" or usercold == "Yes":
         print("You need a hat and gloves.")
-    """
-    elif userhealth == "False":
-        print("Aliens suck. Try again when you're human.")
-        """
