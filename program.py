@@ -7,8 +7,7 @@ userheat = str(input("Is it hot today?: "))
 usercold = str(input("Is it cold today?: "))
 
 # userhealth = bool(input("True or False: I am on Earth: "))
-
-while True:
+if True:
     if usersun == "Yes" and userrain == "No" and usersnow == "No" and userheat == "No" and usercold == "No":
         print("You need sunglasses.")
     if usersun == "Yes" and userrain == "Yes":
@@ -29,3 +28,5 @@ while True:
         print("Don't drive, there might be ice on the roads.")
     if usersnow == "Yes" or usercold == "Yes":
         print("You need a hat and gloves.")
+    else:
+        print("Can't help you right now. Try again.")
