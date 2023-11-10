@@ -1,32 +1,36 @@
-# tells the user what kind of accessories, clothing, or action they need to wear or do today based on the weather (i did not have time to do every posisble combination, sorry)
+# tells the user what kind of accessories, clothing, or action they need to wear or do today based on the weather 
 
-usersun = str(input("Is it sunny today?: "))
-userrain = str(input("Is it raining today?: "))
-usersnow = str(input("Is it snowing today?: "))
-userheat = str(input("Is it hot today?: "))
-usercold = str(input("Is it cold today?: "))
+# variables used
+usertf = bool(input("(True/or leave blank) I am on Earth: "))
 
-# userhealth = bool(input("True or False: I am on Earth: "))
-if True:
-    if usersun == "Yes" and userrain == "No" and usersnow == "No" and userheat == "No" and usercold == "No":
-        print("You need sunglasses.")
-    if usersun == "Yes" and userrain == "Yes":
-        print("You need to look for a rainbow.")
-    if usersun == "Yes" and usercold == "Yes":
-        print("That's a bit strange...")
-    if usersun == "Yes" and userheat == "Yes":
-        print("Wear sunglasses and shorts.")
-    if usersun == "Yes" and usersnow == "Yes":
-        print("I think you're lying.")
-    if usersun == "Yes" and userrain == "Yes" and usersnow == "Yes" and userheat == "Yes" and usercold == "Yes":
-        print("Don't lie.")
-    if usersun == "No" and userheat == "No":
-        print("You need to wear a jacket.")
-    if userrain == "Yes":
-        print("You need to get an umbrella.")
-    if userrain == "Yes" and usercold == "Yes":
-        print("Don't drive, there might be ice on the roads.")
-    if usersnow == "Yes" or usercold == "Yes":
-        print("You need a hat and gloves.")
+# defines function used if users answers match
+def usertcomp():
+    userrain = str(input("Is it raining today?: "))
+    userheat = str(input("Is it hot today?: "))
+    usercold = str(input("Is it cold today?: "))
+    if userrain == "yes" and userheat == "yes" and usercold == "yes":
+        print("Seems like an oddball day, maybe aliens are coming?")
+    elif userrain == "yes" and userheat == "no" and usercold == "no":
+        print("You need an umbrella.")
+    elif userrain == "yes" and userheat == "yes" and usercold == "no":
+        print("You should wear light clothes and bring an umbrella.")
+    elif userrain == "yes" and userheat == "no" and usercold == "yes":
+        print("You might need to watch out for hail, and bring an umbrella regardless.")
+    elif userrain == "no" and userheat == "no" and usercold == "no":
+        print("It's probably a pretty nice day out...")
+    elif userrain == "no" and userheat == "yes" and usercold == "yes":
+        print("You're lying, it can't be hot and cold at the same time.")
+    elif userrain == "no" and userheat == "no" and usercold == "yes":
+        print("You should bring a hat and gloves, maybe even a jacket..")
+    elif userrain == "no" and userheat == "yes" and usercold == "no":
+        print("You need to wear light clothing and drink water.")
     else:
-        print("Can't help you right now. Try again.")
+        print("Cannot help you today. try again later.")
+
+# executes code based on users response
+if usertf == True:
+    usertcomp()
+else:
+    print("You must be on Earth to ask about the weather.")
+
+
